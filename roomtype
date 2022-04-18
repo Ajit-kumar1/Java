@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+class Rom
+{
+	Scanner s=new Scanner(System.in);
+	int roomno,roomarea;
+	String roomtype,acmachine; 
+
+void setdata()
+{
+	System.out.println("Enter the room no ");
+	roomno=s.nextInt();
+	System.out.println("Enter Room type Deluxe or Normal ");
+	roomtype=s.next();
+	System.out.println("Enter Room Area ");
+	roomarea=s.nextInt();
+	System.out.println("Is Room has AC or Not");
+	acmachine=s.next();
+}
+void displaydata()
+{
+	System.out.println(roomno+" is your Room Number");
+	System.out.println("Your room type is "+roomtype);
+	System.out.println(acmachine+" AC in your Room ");
+	System.out.println(roomarea+" Is your Room Area");
+}
+}
+public class Room {
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stu
+		Rom s1=new Rom();
+		s1.setdata();
+		s1.displaydata();
+
+	}
+}
