@@ -1,0 +1,37 @@
+import java.util.*;
+public class Miserable_Fool {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int total;
+		System.out.println("Enter the total range you want ");
+		total = sc.nextInt();
+		int inrange,i,j,count=0,k;
+		for(i=0;i<total;i++)
+		{
+			System.out.println("Enter the range of array ");
+			inrange = sc.nextInt();
+			int arr[] = new int[inrange],mul=1;
+			for(j=0;j<inrange;j++)
+			{
+				arr[j] = sc.nextInt();	
+				mul=mul*arr[j];
+			}
+			for(k=2;k<=mul;k++)
+			{
+				if(k%2==0)
+				{
+				if(mul%k==0)
+				{
+					count++;	
+				}
+				}
+			}
+			System.out.println("Total = "+count);
+			count=0;
+		}
+
+	}
+
+}
