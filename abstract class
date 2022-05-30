@@ -1,0 +1,20 @@
+abstract class Bike{
+	abstract void run();
+	void gear()
+	{
+		System.out.println("Gear of bike changed");
+	}
+}
+ class Fun extends Bike {
+	void run()
+	 {
+		 System.out.println("Bike is running");
+	 }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Fun f = new Fun();
+		f.gear();
+		f.run();
+	}
+
+}
