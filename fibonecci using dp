@@ -1,0 +1,33 @@
+package Programs;
+import java.util.*;
+public class Fibon {
+ 
+	static int fib(int n) {
+		int i;
+		int[] f=new int[n+2];
+		f[0]=0;
+		f[1]=1;
+		for(i=2;i<=n;i++) {
+			f[i]=f[i-1]+f[i-2];
+		}
+		
+		return f[n];
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter a range of Fibonecci:");
+		int a=sc.nextInt();
+		for(int i=0;i<a;i++) {
+			System.out.println(fib(i)+" ");
+		}
+	}
+
+//	private static String fib(int a) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+
+}
