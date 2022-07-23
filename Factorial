@@ -1,0 +1,28 @@
+package Programs;
+import java.util.*;
+public class Factorial {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number for factorial:");
+		int a=sc.nextInt();
+		int i=f(a);
+		System.out.println(" = "+i);
+		
+		
+	}
+
+	private static int f(int a) {
+		// TODO Auto-generated method stub
+		if(a<1)
+			return 1;
+		else {
+			System.out.print(a+" * ");
+			a=a*f(a-1);
+		}
+		return a;
+	}
+
+}
