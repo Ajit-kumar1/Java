@@ -1,0 +1,49 @@
+package Programs;
+import java.io.*;
+class TemperatureBelowNormal extends Exception{
+	public String toString() {
+		return "Temperature Below Normal";
+	}
+}
+class NormalTemperature extends Exception{
+	public String toString() {
+		return "Normal Temperature";
+	}
+}
+class TemperatureHigh extends Exception{
+	public String toString() {
+		return "Temperature is high";
+	}
+}
+
+public class Temprature {
+
+	public static void main(String[] args)throws NormalTemperature,TemperatureHigh,IOException,TemperatureBelowNormal {
+		// TODO Auto-generated method stub
+		BufferedReader sc= new BufferedReader(new InputStreamReader (System.in));
+		System.out.println("Please Enter Temperature in Celcius");
+		int temp= Integer.parseInt(sc.readLine());
+		try {
+			if(temp>40) {
+				throw new TemperatureHigh();
+			}
+			else if(temp<20) {
+				throw new TemperatureBelowNormal();
+			}
+			else {
+				throw new NormalTemperature();
+			}
+		}
+			catch(TemperatureHigh e) {
+				System.out.println(e.toString());
+			}
+		catch (NormalTemperature e) {
+			System.out.println(e.toString());
+		}
+		catch(TemperatureBelowNormal e) {
+			System.out.println(e.toString());
+		}
+		}
+	}
+
+
