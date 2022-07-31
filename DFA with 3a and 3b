@@ -1,0 +1,32 @@
+package Programs;
+import java.util.*;
+public class Even3odd3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Accepting String of only 3 a's and 3 b's");
+		System.out.println("Enter Your String");
+		String ch=sc.next();
+		int acount=0,bcount=0;
+		int l=ch.length();
+		for(int i=0;i<l;i++) {
+			if(ch.charAt(i)=='a') {
+				acount++;
+			}
+			else if(ch.charAt(i)=='b') {
+				bcount++;
+			}
+			else {
+				System.out.println("Invalid String Enter a valid String");
+				break;
+			}
+		}
+		if(acount==3 && bcount==3)
+			System.out.println("String Accepted");
+		else
+			System.out.println("String Not Accepted");
+
+	}
+
+}
