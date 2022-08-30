@@ -1,0 +1,30 @@
+package Programs;
+import java.util.*;
+
+public class Accenture {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter the range of the array");
+		int n=sc.nextInt();
+		int[] arr1=new int[n];
+		int i,j;
+		for(i=0;i<n;i++) {
+			arr1[i]=sc.nextInt();
+		}
+		for(i=0;i<n;i++) {
+			int flag=-1;
+			for(j=i+1;j<n;j++) {
+				if(arr1[i]>arr1[j])
+				{
+					flag=arr1[j];
+				break;
+				}
+			}
+			System.out.println(flag);
+		}
+
+	}
+
+}
