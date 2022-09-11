@@ -1,0 +1,48 @@
+package Programs;
+import java.util.*;
+public class NumbeGame {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		int i,j;
+		int[] arr1=new int[9];
+		System.out.println("Enter 9 Continious Numbers : ");
+		for(i=0;i<9;i++) {
+			arr1[i]=sc.nextInt();
+		}
+		int base=arr1[0],flag=0;
+		for(i=1;i<9;i++) {
+			if(arr1[i]==base+1) {
+				base=arr1[i];
+			}
+			else {flag=1;
+				break;
+			}
+		}
+		if(flag==0) {
+		int[][] arr = new int[3][3];
+		arr[0][0]=arr1[1];
+		arr[0][1]=arr1[6];
+		arr[0][2]=arr1[5];
+		arr[1][0]=arr1[8];
+		arr[1][1]=arr1[4];
+		arr[1][2]=arr1[0];
+		arr[2][0]=arr1[3];
+		arr[2][1]=arr1[2];
+		arr[2][2]=arr1[7];
+		for(i=0;i<3;i++) {
+			for(j=0;j<3;j++) {
+				System.out.print(arr[i][j] +"  ");
+			}
+			System.out.println();
+		}
+	}
+		else
+		{
+			System.out.println("System says :-->  You haven't entered sequence number try again");
+		}
+		System.out.println();
+		System.out.println("Thank You...");
+	}
+
+}
